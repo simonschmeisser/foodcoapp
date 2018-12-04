@@ -29,20 +29,13 @@ android {
             def props = new Properties()
             props.load(new FileInputStream(rootProject.file('release.properties')))
             release {
-                storeFile rootProject.file(props.storeFile)
-                storePassword props.storePassword
+                storeFile rootProject.file(props.keyStore)
+                storePassword props.keyStorePassword
                 keyAlias props.keyAlias
-                keyPassword props.keyPassword
+                keyPassword props.keyAliasPassword
             }
         }
     }
-
-    def props = new Properties()
-    props.load(new FileInputStream(rootProject.file("release.properties")))
-    android.signingConfigs.release.storeFile rootProject.file(props.keyStore)
-    android.signingConfigs.release.storePassword props.keyStorePassword
-    android.signingConfigs.release.keyAlias props.keyAlias
-    android.signingConfigs.release.keyPassword props.keyAliasPassword
 
     buildTypes {
         release {
