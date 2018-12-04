@@ -152,6 +152,7 @@
       android:finishOnTaskLaunch="true" />
     <provider
       android:name=".LedgerProvider"
+      android:exported="true"
       android:authorities="org.baobab.foodcoapp" />
   </application>
 
