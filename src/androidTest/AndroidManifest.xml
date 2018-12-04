@@ -6,6 +6,7 @@
 
     <provider
       android:name="org.baobab.foodcoapp.LedgerProvider"
+      android:exported="true"
       android:authorities="org.baobab.foodcoapp.test" />
 
   </application>
